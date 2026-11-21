@@ -1,1 +1,146 @@
-<h1>Hello, this is my site!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobrasada Studio</title>
+<meta name="description" content="Sobrasada Studio makes mobile games. Download our game on the App Store and Google Play.">
+<style>
+  :root {
+    --red: #C2412D;
+    --red-dark: #8E2A1C;
+    --cream: #FFF6EA;
+    --ink: #2B1B14;
+    --muted: #7A5E50;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: linear-gradient(160deg, var(--red) 0%, var(--red-dark) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 80px 20px 90px;
+  }
+  .logo {
+    width: 84px; height: 84px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--red);
+    font-size: 40px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  }
+  h1 { font-size: clamp(32px, 6vw, 52px); letter-spacing: -.5px; }
+  header p { margin-top: 12px; font-size: 18px; opacity: .9; }
+
+  main {
+    flex: 1;
+    max-width: 720px;
+    margin: -50px auto 0;
+    padding: 0 20px 40px;
+    width: 100%;
+  }
+  .card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 40px 28px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(43,27,20,.12);
+  }
+  .card h2 { font-size: 26px; margin-bottom: 10px; }
+  .card p { color: var(--muted); font-size: 17px; line-height: 1.5; }
+
+  .stores {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    justify-content: center;
+    margin-top: 28px;
+  }
+  .store {
+    display: inline-flex; flex-direction: column; align-items: flex-start;
+    min-width: 200px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    transition: transform .15s, background .15s;
+  }
+  .store:hover { transform: translateY(-2px); background: #000; }
+  .store small { font-size: 12px; opacity: .8; }
+  .store strong { font-size: 20px; }
+
+  .links {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-top: 34px;
+  }
+  .btn {
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 2px solid var(--red);
+    color: var(--red);
+    background: transparent;
+    font-size: 16px; font-weight: 600;
+    text-decoration: none;
+    transition: background .15s, color .15s;
+  }
+  .btn:hover { background: var(--red); color: #fff; }
+  .btn.solid { background: var(--red); color: #fff; }
+  .btn.solid:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">S</div>
+  <h1>Sobrasada Studio</h1>
+  <p>Small studio. Fun mobile games.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Our game is coming soon</h2>
+    <p>Download it for free on your phone.</p>
+
+    <div class="stores">
+      <!-- Replace these two links with the real game pages later -->
+      <a class="store" href="https://www.apple.com/app-store/" target="_blank" rel="noopener">
+        <small>Download on the</small>
+        <strong>App Store</strong>
+      </a>
+      <a class="store" href="https://play.google.com/store" target="_blank" rel="noopener">
+        <small>Get it on</small>
+        <strong>Google Play</strong>
+      </a>
+    </div>
+  </section>
+
+  <nav class="links">
+    <a class="btn solid" href="mailto:sobrasadastudio@gmail.com">Contact us</a>
+    <a class="btn" href="privacy.html">Privacy Policy</a>
+    <a class="btn" href="terms.html">Terms of Service</a>
+  </nav>
+</main>
+
+<footer>
+  &copy; <span id="year">2026</span> Sobrasada Studio
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
